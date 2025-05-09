@@ -17,7 +17,6 @@
 
 buildscript {
     repositories {
-        mavenLocal()
         google()
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
@@ -34,8 +33,9 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenLocal()
-        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        google { url 'https://maven.aliyun.com/repository/google' }
+        mavenCentral { url 'https://maven.aliyun.com/repository/public' }
         maven { url "https://jitpack.io" }
         maven { url "https://plugins.gradle.org/m2/" }
         google()
